@@ -2,6 +2,7 @@ import React from "react";
 import {
   Checkbox,
   Grid,
+  GridColumn,
   Header,
   Icon,
   Image,
@@ -9,21 +10,65 @@ import {
   Segment,
   Sidebar,
 } from "semantic-ui-react";
+import MainMenu from "./Menu";
 
 const SidebarExampleSidebar = () => {
   return (
-    <Grid stackable>
-      <Grid.Column computer={3} tablet={3} mobile={16}>
-        <Sidebar as={Menu} vertical visible>
-          <Menu.Item as="a">Home</Menu.Item>
-          <Menu.Item as="a">Tasks</Menu.Item>
-          <Menu.Item as="a">Tasks</Menu.Item>
-        </Sidebar>
+    <Grid>
+      <Grid.Column computer={3} tablet={4} only="computer tablet" style={{height:"100vh"}}>
+        <MainMenu />
       </Grid.Column>
-
-      <Grid.Column computer={13} tablet={13} mobile={16}>
-        <Header as="h3">Application Content</Header>
-        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+      <Grid.Column only="mobile" width={16}>
+        <Menu inverted color={"blue"} size="tiny" borderless attached>
+          <Menu.Menu position="right">
+            <Menu.Item></Menu.Item>
+          </Menu.Menu>
+        </Menu>
+      </Grid.Column>
+      <Grid.Column computer={13} tablet={12} mobile={16} style={{overflowY:"auto", height:"100vh"}}>
+        <Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment>
+        <Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment>
+        <Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment>
+        <Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment><Segment basic>
+          <Header as="h3">Application Content</Header>
+          <Image src="/images/wireframe/paragraph.png" />
+        </Segment>
       </Grid.Column>
     </Grid>
   );
