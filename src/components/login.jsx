@@ -15,8 +15,10 @@ export default function Login() {
     <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
       <Grid.Column style={{ maxWidth: 450 }}>
         <Header as="h2" color="blue" textAlign="center">
-          <Image src="https://backflipt.com/assets/img/Backflipt-Logo-180x180.svg" size="medium"/>{" "}
-          Welcome Back
+          <Image
+            src="https://backflipt.com/assets/img/Backflipt-Logo-180x180.svg"
+            size="medium"
+          />
         </Header>
         <Form size="large">
           <Segment stacked>

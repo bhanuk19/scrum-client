@@ -10,7 +10,7 @@ export default function Layout() {
         computer={3}
         tablet={4}
         only="computer tablet"
-        style={{ height: "100vh", paddingRight: "0px" }}
+        style={{ height: "100vh" }}
       >
         <MainMenu />
       </Grid.Column>
@@ -21,7 +21,7 @@ export default function Layout() {
         computer={13}
         tablet={12}
         mobile={16}
-        style={{ overflowY: "auto", height: "fit-content" }}
+        style={{ overflowY: "auto", height: "fit-content"}}
       >
         <Outlet />
       </Grid.Column>

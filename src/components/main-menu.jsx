@@ -12,9 +12,9 @@ export default function MainMenu() {
     <Menu
       vertical
       color={"blue"}
-      size="large"
+      size="medium"
       inverted
-      style={{ height: "100vh", borderRadius: "0px", width: "100%" }}
+      style={{ height: "100vh", borderRadius: "0px", width:"100%"}}
     >
       <Menu.Item>
         <Image
@@ -37,23 +37,25 @@ export default function MainMenu() {
             Your Tasks
           </Menu.Item>
           <Menu.Item
-            name="assign"
+            name="team"
             as={NavLink}
-            to="assign"
-            active={activeItem === "assign"}
+            to="team"
+            active={activeItem === "team"}
             onClick={handleItemClick}
           >
-            Assign Task
+            Your Team
           </Menu.Item>
         </Menu.Menu>
       </Menu.Item>
       <Menu.Item
-        name="calendar"
-        active={activeItem === "calendar"}
+        name="history"
+        as={NavLink}
+        to="history"
+        active={activeItem === "history"}
         onClick={handleItemClick}
       >
         <Icon name="calendar alternate outline icon" />
-        Calendar
+        History
       </Menu.Item>
       <Menu.Item
         name="teams"

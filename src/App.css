@@ -1,3 +1,6 @@
+::-webkit-scrollbar {
+  width: 0px!important;
+}
 /* 404 page--------- */
 #error-main {
   display: table;
@@ -30,4 +33,12 @@
   to {
     box-shadow: inset -3px 0px 0px transparent;
   }
+}
+
+/* Main Content Css */
+.date-pick-button button {
+  width: 115px;
+}
+.date-picker {
+  margin-top: 30px;
 }

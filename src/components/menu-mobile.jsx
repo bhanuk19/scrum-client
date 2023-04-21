@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import {
-  Icon,
-  Image,
-  Menu,
-  Sidebar,
-} from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
+import { Icon, Image, Menu, Sidebar } from "semantic-ui-react";
 
 export default function MobileMenu() {
   const handleLogout = () => {};
@@ -37,7 +33,7 @@ export default function MobileMenu() {
         style={{
           backgroundColor: "rgba(0, 0, 0, 0.795)",
           position: "fixed",
-          height: "110vh",
+          height: "100vh",
           width: "100%",
           zIndex: "2",
         }}
@@ -49,6 +45,14 @@ export default function MobileMenu() {
     <>
       {visible && <Overlay />}
       <Menu inverted color={"blue"} size="tiny" borderless attached fixed>
+        <Menu.Item>
+          <Image
+            src={
+              "https://www.backflipt.com/new/assets/img/backflipt-logo-all.svg"
+            }
+            size="tiny"
+          />
+        </Menu.Item>
         <Menu.Menu position="right">
           <Menu.Item onClick={toggleSidebar}>{icon}</Menu.Item>
         </Menu.Menu>
@@ -81,17 +85,32 @@ export default function MobileMenu() {
         <Menu.Item>
           Home
           <Menu.Menu>
-            <Menu.Item name="home" onClick={handleItemClick}>
+            <Menu.Item
+              name="home"
+              as={NavLink}
+              to="home"
+              onClick={handleItemClick}
+            >
               Your Tasks
             </Menu.Item>
-            <Menu.Item name="assign" onClick={handleItemClick}>
-              Assign Task
+            <Menu.Item
+              name="team"
+              as={NavLink}
+              to="assign"
+              onClick={handleItemClick}
+            >
+              Your Team
             </Menu.Item>
           </Menu.Menu>
         </Menu.Item>
-        <Menu.Item name="calendar" onClick={handleItemClick}>
+        <Menu.Item
+          name="history"
+          as={NavLink}
+          to="history"
+          onClick={handleItemClick}
+        >
           <Icon name="calendar alternate outline icon" />
-          Calendar
+          History
         </Menu.Item>
         <Menu.Item name="teams" onClick={handleItemClick}>
           <Icon name="grid layout" />
